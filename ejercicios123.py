@@ -5,16 +5,14 @@ class Nodo:
         self.siguiente = None
         
 # ejercicio 2 y 3
-from nodo import Nodo
-
 class listaEnlazada:
     def __init__(self):
         self.head = None
 
-def insertar_inicio(self, dato):
-nuevo = Nodo(dato)
-nuevo.siguiente = self.head
-self.head = nuevo
+    def insertar_inicio(self, dato):
+        nuevo = Nodo(dato)
+        nuevo.siguiente = self.head
+        self.head = nuevo
 
 def insertar_final(self, dato):
     nuevo = Nodo(dato)
