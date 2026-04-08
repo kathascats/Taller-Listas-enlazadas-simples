@@ -16,6 +16,16 @@ nuevo = Nodo(dato)
 nuevo.siguiente = self.head
 self.head = nuevo
 
+def insertar_final(self, dato):
+    nuevo = Nodo(dato)
+    if self.head is None:
+        self.head = nuevo
+        return
+    actual = self.head
+    while actual.siguiente is not None:
+        actual = actual.siguiente
+    actual.siguiente = nuevo
+
 
 
 
