@@ -21,8 +21,8 @@ class listaEnlazada:
         if self.cabeza is None:
             print("Lista vacía")
             return
-        elementos = []
         actual = self.cabeza
+        elementos = []
         while actual:
             elementos.append(str(actual.dato))
             actual = actual.siguiente
@@ -84,6 +84,6 @@ class listaEnlazada:
             actual = actual.siguiente
         valores.sort()
         actual = self.cabeza
-        for v in valores:
-            actual.dato = v
+        for valor in valores:
+            actual.dato = valor
             actual = actual.siguiente
