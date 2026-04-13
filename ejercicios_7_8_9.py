@@ -65,4 +65,3 @@ def ordenar(self):
             
             # se marca el límite para no evaluar los elementos que ya quedaron ordenados al final
             fin = actual
-
