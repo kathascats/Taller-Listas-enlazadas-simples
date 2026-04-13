@@ -1,10 +1,8 @@
-#ejercicio 1
 class Nodo:
     def __init__(self, dato):
         self.dato = dato
         self.siguiente = None
-        
-#ejercicios 2 y 3
+
 class listaEnlazada:
     def __init__(self):
         self.cabeza = None
@@ -23,8 +21,8 @@ class listaEnlazada:
         if self.cabeza is None:
             print("Lista vacía")
             return
-        actual = self.cabeza
         elementos = []
+        actual = self.cabeza
         while actual:
             elementos.append(str(actual.dato))
             actual = actual.siguiente
@@ -32,12 +30,12 @@ class listaEnlazada:
 
     def buscar(self, valor):
         actual = self.cabeza
-        pos = 1
+        posicion = 1
         while actual:
             if actual.dato == valor:
-                return pos
+                return posicion
             actual = actual.siguiente
-            pos += 1
+            posicion += 1
         return -1
 
     def eliminar_por_valor(self, valor):
