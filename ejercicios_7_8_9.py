@@ -1,8 +1,10 @@
+from ejercicios123 import listaEnlazada
+
 def tamano(self):
         # ejercicio 7
         # retorna la cantidad de elementos en la lista
         contador = 0
-        actual = self.cabeza
+        actual = self.head
         
         while actual is not None:
             contador += 1
@@ -14,7 +16,7 @@ def invertir(self):
         # ejercicio 8
         # invierte el orden de la lista reestructurando enlaces
         previo = None
-        actual = self.cabeza
+        actual = self.head
         siguiente = None
 
         while actual is not None:
@@ -23,13 +25,13 @@ def invertir(self):
             previo = actual               # avanzamos previo
             actual = siguiente            # avanzamos actual
             
-        self.cabeza = previo              # el último nodo se convierte en la nueva cabeza
+        self.head = previo              # el último nodo se convierte en la nueva cabeza
 
 def ordenar(self):
         # ejercicio 9
         # metodo de burbuija
         # se ordena de forma ascendenmte
-        if self.cabeza is None or self.cabeza.siguiente is None:
+        if self.head is None or self.head.siguiente is None:
             return
 
         hubo_intercambio = True
@@ -37,7 +39,7 @@ def ordenar(self):
 
         while hubo_intercambio:
             hubo_intercambio = False
-            actual = self.cabeza
+            actual = self.head
             previo = None
 
             while actual.siguiente is not fin:
@@ -51,7 +53,7 @@ def ordenar(self):
 
                     # 2. eeconectamos con el resto de la lista por detrás
                     if previo is None:
-                        self.cabeza = siguiente
+                        self.head = siguiente
                     else:
                         previo.siguiente = siguiente
 
